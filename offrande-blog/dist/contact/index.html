@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | L'Offrande Vivante</title>
+  <meta name="description" content="Blog personnel faceless dédié à la vie consacrée, à la foi chrétienne, aux leçons de vie et au discernement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">
+        <span class="brand-mini">L'</span>
+        <span class="brand-main">OFFRANDE VIVANTE</span>
+        <span class="brand-sub">Blog personnel faceless</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu">☰</button>
+      <nav class="site-nav">
+        <a href="/" >Accueil</a>
+        <a href="/articles/" >Articles</a>
+        <a href="/a-propos/" >À propos</a>
+        <a href="/contact/" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+<section class="page-intro">
+  <div class="container narrow">
+    <p class="section-kicker">Contact</p>
+    <h1>Envoyer un message</h1>
+    <p>Ce formulaire utilise Netlify Forms. Les messages apparaîtront dans l'onglet <strong>Forms</strong> de Netlify après déploiement.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container narrow">
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci/" class="stack-form card-form">
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="hidden"><label>Ne pas remplir <input name="bot-field" /></label></p>
+      <label>Nom
+        <input type="text" name="name" required />
+      </label>
+      <label>Email
+        <input type="email" name="email" required />
+      </label>
+      <label>Sujet
+        <input type="text" name="subject" required />
+      </label>
+      <label>Message
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+</section></main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-title">L'Offrande Vivante</p>
+      <p>Une présence discrète, une parole assumée.</p>
+      <p class="footer-small">Déployable sur Netlify · Formulaires intégrés · Admin éditable avec prévisualisation · Version premium claire</p>
+    </div>
+  </footer>
+  <script src="/main.js"></script>
+</body>
+</html>
