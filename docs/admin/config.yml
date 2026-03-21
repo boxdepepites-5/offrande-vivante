@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+publish_mode: editorial_workflow
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+site_url: "/"
+display_url: "/"
+logo_url: "/"
+
+collections:
+  - name: "posts"
+    label: "Articles"
+    label_singular: "Article"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "articles/{{slug}}"
+    format: "frontmatter"
+    extension: "md"
+    editor:
+      preview: true
+    fields:
+      - { label: "Numéro", name: "num", widget: "string", required: false }
+      - { label: "Catégorie", name: "cat", widget: "string" }
+      - { label: "Verset", name: "verset", widget: "string", required: false }
+      - { label: "Titre", name: "titre", widget: "string" }
+      - { label: "Sous-titre", name: "soustitre", widget: "string", required: false }
+      - { label: "Introduction", name: "intro", widget: "text" }
+      - { label: "Slug", name: "slug", widget: "string", hint: "Utiliser seulement des lettres minuscules et des tirets." }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
+      - { label: "Statut", name: "status", widget: "select", required: false, options: ["draft", "published"], default: "published", hint: "Utilise draft pour préparer un article avant publication." }
+      - { label: "Contenu", name: "body", widget: "markdown" }
